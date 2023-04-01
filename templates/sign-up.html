@@ -13,19 +13,23 @@
   <style>
     body{
       font-family: Arial, Helvetica, sans-serif;
+      background-image: url("https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=1380&t=st=1680343825~exp=1680344425~hmac=9625a3c04432bc582a186c5308d99c60f5a4d28d5a08a92eba97964120c68003");
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size:cover;
     }
   </style>
 </head>
 
 <body>
 
-  <div id="wrapper">
-    <div class="container">
-      <div class="phone-app-demo"></div>
-      <div class="form-data">
-        <form action="" method="POST">
+  <div id="wrapper"  style="border-radius: 16px;">
+    <div class="container" style="border-radius: 16px;">
+      
+      <div class="form-data" style="box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;border-radius: 16px;">
+        <form action="" method="POST" style="border-radius: 16px;background-color: rgba(240, 248, 255, 0);">
           {% csrf_token %}
-          <div class="logo">
+          <div class="logo" style="border-radius: 16px;">
             <b style="font-size: 40px;font-weight: bolder;letter-spacing: 12px;">INTERACT</b>
           </div>
           <br><br>
@@ -33,31 +37,18 @@
           {{form.email}}
           {{form.password1}}
           {{form.password2}}
-          <button class="form-btn" type="submit">Log in</button>
-
-
-          <span class="has-separator">Or</span>
-          <a class="facebook-login" href="#">
-            <i class="fab fa-facebook-square"></i> Log in with Facebook
-          </a>
-          <a class="password-reset" href="#">Forgot password?</a>
+          <button class="form-btn" type="submit" style="background-color: black;">Log in</button>
+          
         </form>
-        <div class="sign-up">
-          Don't have an account? <a href="{% url 'sign-in' %}">Sign In</a>
-        </div>
-        <div class="get-the-app">
-          <span>Get the app.</span>
-          <div class="badges">
-            <img src="{% static 'assets2/images/app-store.png' %}" alt="app-store badge">
-            <img src="{% static 'assets2/images/google-play.png' %}" alt="google-play badge">
-          </div>
+        <div class="sign-up" style="background-color: rgba(240, 248, 255, 0);">
+          Don't have an account? <a href="{% url 'sign-in' %}" style="color: rgb(255, 12, 113);">Sign In</a>
         </div>
       </div>
     </div>
-
-
+    <footer style="margin-top:44px;padding: 0%;padding-bottom: 12px;text-align: right;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+      @2023 CE096 DEEP PATEL
+    </footer>
   </div>
-
 </body>
 
 </html>
