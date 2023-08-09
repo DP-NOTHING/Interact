@@ -1,0 +1,27 @@
+{
+    "version":2,
+    "builds":[
+        {
+            "src":"ig_prj/wsgi.py",
+            "use":"@versel/python",
+            "config":{"maxLambdaSize":"20mb","runtime":"python3.11"}
+        },
+        {
+            "src":"build_files.sh",
+            "use":"@versel/static-build",
+            "config":{
+                "distDir":"staticfiles_build"
+            }
+        }
+    ],
+    "routes":[
+        {
+            "src":"/static/(.*)",
+            "dest":"/static/$1"
+        },
+        {
+            "src":"/(.*)",
+            "dest":"ig_prj/wsgi.py"
+        }
+    ]
+}
