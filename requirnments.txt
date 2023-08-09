@@ -18,5 +18,5 @@ Pillow==8.3.1
 h2==3.2.0
 hpack==3.0.0
 hstspreload==2021.8.1
-whitenoise==5.2.0
+whitenoise==6.4.0
 psycopg2-binary==2.9.7
