@@ -78,6 +78,7 @@ DATABASES = {
         'HOST':"ep-bitter-forest-20208669-pooler.us-east-1.postgres.vercel-storage.com",
         'PASSWORD':"O5mJiAW4FPtD",
         'NAME':"verceldb",
+        'PORT':"5432"
     }
 }
 
