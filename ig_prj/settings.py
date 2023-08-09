@@ -65,12 +65,19 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'URL': os.getenv('POSTGRES_URL'),
-        'NAME': os.getenv('PGNAME'),
-        'USER': os.getenv('PGUSER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'HOST': os.getenv('PGHOST'),
-        # 'PORT': os.getenv('PGPORT),
+        # 'URL': os.getenv('POSTGRES_URL'),
+        # 'NAME': os.getenv('PGNAME'),
+        # 'USER': os.getenv('PGUSER'),
+        # 'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        # 'HOST': os.getenv('PGHOST'),
+        # # 'PORT': os.getenv('PGPORT),
+        'URL':"postgres://default:O5mJiAW4FPtD@ep-bitter-forest-20208669-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb",
+# POSTGRES_PRISMA_URL="postgres://default:O5mJiAW4FPtD@ep-bitter-forest-20208669-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15",
+# POSTGRES_URL_NON_POOLING="postgres://default:O5mJiAW4FPtD@ep-bitter-forest-20208669.us-east-1.postgres.vercel-storage.com:5432/verceldb",
+        'USER':"default",
+        'HOST':"ep-bitter-forest-20208669-pooler.us-east-1.postgres.vercel-storage.com",
+        'PASSWORD':"O5mJiAW4FPtD",
+        'NAME':"verceldb",
     }
 }
 
